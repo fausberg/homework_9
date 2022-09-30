@@ -17,6 +17,10 @@ public class Vector {
 
 
     public void init(int n) {//создание автозаполнения
+        if(n % 2 != 0){
+            System.out.println("такого вектора нет");
+            return;
+        }
         Random random = new Random();
         arr = new int[n];
         for (int i = 0; i < n; i++) {
@@ -25,6 +29,10 @@ public class Vector {
     }
 
     public static void init(long n) {//статический метод
+        if(n % 2 != 0){
+            System.out.println("такого вектора нет");
+            return;
+        }
         Random random = new Random();
         Vector vector = new Vector();
         for (int i = 0; i < n; i++) {
@@ -33,6 +41,10 @@ public class Vector {
     }
 
     public void init(short n) {//создание вручную
+        if(n % 2 != 0){
+            System.out.println("такого вектора нет");
+            return;
+        }
         Scanner scanner = new Scanner(System.in);
         arr = new int[n];
         for (int i = 0; i < n; i++) {
