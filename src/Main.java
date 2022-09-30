@@ -1,20 +1,23 @@
 
 public class Main {
     public static void main(String[] args) {
-        Vector vector = new Vector(2);
-        Vector vector1 = new Vector(2);
+        Vector[] vectors = new Vector[10];
+        {
+            vectors[0] = new Vector(4);
+            vectors[1] = new Vector(4);
+        }
 
-        vector.info();
-        vector1.info();
+        vectors[0].info();
+        vectors[1].info();
 
-        vector.vectorPow(vector, vector1);
-        vector.info();
+        vectors[0].vectorPow(vectors[0], vectors[1]);
+        vectors[0].info();
 
-        vector.vectorPlus(vector, vector1);
-        vector.info();
+        vectors[0].vectorPlus(vectors[0], vectors[1]);
+        vectors[0].info();
 
-        vector.vectorMinus(vector, vector1);
-        vector.info();
+        vectors[0].vectorMinus(vectors[0], vectors[1]);
+        vectors[0].info();
 
     }
 }

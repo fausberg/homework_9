@@ -53,7 +53,7 @@ public class Vector {
     }
 
     public void opisProstranstva() {
-        System.out.println("Это вектор " + arr.length + "-мерного пространства");
+        System.out.println("Это вектор " + arr.length/2 + "-мерного пространства");
     }
 
 
