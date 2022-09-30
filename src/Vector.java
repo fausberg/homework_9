@@ -66,15 +66,22 @@ public class Vector {
         System.out.println("Длина вектора " + length);
     }
 
-    public Vector vectorPow(Vector vector1, Vector vector2) {
+    public int vectorPow(Vector vector1, Vector vector2) {
+        int pow = 0;
+        Vector vector = new Vector(vector1.arr.length);
         if (vector1.arr.length != vector2.arr.length) {
             System.out.println("пространства не совпадают");
-            return vector1;
+            return pow;
         }
         for (int i = 0; i < arr.length; i++) {
-            vector1.arr[i] = vector1.arr[i] * vector2.arr[i];
+            vector.arr[i] = vector1.arr[i] * vector2.arr[i];
         }
-        return vector1;
+        for (int i = 0; i < arr.length; i++) {
+            pow+= vector.arr[i];
+        }
+        System.out.println("скалярное произведение " + pow);
+        System.out.println();
+        return pow;
     }
 
 
