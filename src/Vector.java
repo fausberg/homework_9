@@ -72,12 +72,13 @@ public class Vector {
         if (vector1.arr.length != vector2.arr.length) {
             System.out.println("пространства не совпадают");
             return pow;
-        }
-        for (int i = 0; i < arr.length; i++) {
-            vector.arr[i] = vector1.arr[i] * vector2.arr[i];
-        }
-        for (int i = 0; i < arr.length; i++) {
-            pow+= vector.arr[i];
+        }else {
+            for (int i = 0; i < arr.length; i++) {
+                vector.arr[i] = vector1.arr[i] * vector2.arr[i];
+            }
+            for (int i = 0; i < arr.length; i++) {
+                pow += vector.arr[i];
+            }
         }
         System.out.println("скалярное произведение " + pow);
         System.out.println();
@@ -89,9 +90,10 @@ public class Vector {
         if (vector1.arr.length != vector2.arr.length) {
             System.out.println("пространства не совпадают");
             return vector1;
-        }
-        for (int i = 0; i < arr.length; i++) {
-            vector1.arr[i] = vector1.arr[i] + vector2.arr[i];
+        }else {
+            for (int i = 0; i < arr.length; i++) {
+                vector1.arr[i] = vector1.arr[i] + vector2.arr[i];
+            }
         }
         return vector1;
     }
@@ -100,9 +102,10 @@ public class Vector {
     public Vector vectorMinus(Vector vector1, Vector vector2) {
         if (vector1.arr.length != vector2.arr.length) {
             return vector1;
-        }
-        for (int i = 0; i < arr.length; i++) {
-            vector1.arr[i] = vector1.arr[i] - vector2.arr[i];
+        }else {
+            for (int i = 0; i < arr.length; i++) {
+                vector1.arr[i] = vector1.arr[i] - vector2.arr[i];
+            }
         }
         return vector1;
     }
